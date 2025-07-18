@@ -24,6 +24,16 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				crypto: {
+					primary: 'hsl(var(--crypto-primary))',
+					'primary-glow': 'hsl(var(--crypto-primary-glow))',
+					success: 'hsl(var(--crypto-success))',
+					'success-glow': 'hsl(var(--crypto-success-glow))',
+					warning: 'hsl(var(--crypto-warning))',
+					'warning-glow': 'hsl(var(--crypto-warning-glow))',
+					danger: 'hsl(var(--crypto-danger))',
+					'danger-glow': 'hsl(var(--crypto-danger-glow))',
+				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
@@ -62,6 +72,20 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				}
+			},
+			backgroundImage: {
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-success': 'var(--gradient-success)',
+				'gradient-chart': 'var(--gradient-chart)',
+			},
+			boxShadow: {
+				'crypto': 'var(--shadow-crypto)',
+				'glow': 'var(--shadow-glow)',
+				'card': 'var(--shadow-card)',
+			},
+			transitionTimingFunction: {
+				'smooth': 'var(--transition-smooth)',
+				'fast': 'var(--transition-fast)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

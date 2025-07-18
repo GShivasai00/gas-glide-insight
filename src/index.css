@@ -8,35 +8,59 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 222 47% 11%;
+    --foreground: 213 31% 91%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 224 44% 7%;
+    --card-foreground: 213 31% 91%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 224 44% 7%;
+    --popover-foreground: 213 31% 91%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 195 100% 50%;
+    --primary-foreground: 222 47% 11%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 240 21% 15%;
+    --secondary-foreground: 213 31% 91%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 142 76% 36%;
+    --accent-foreground: 210 40% 98%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 63% 31%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 240 21% 15%;
+    --input: 240 21% 15%;
+    --ring: 195 100% 50%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Crypto-specific design tokens */
+    --crypto-primary: 195 100% 50%;
+    --crypto-primary-glow: 195 100% 60%;
+    --crypto-success: 142 76% 36%;
+    --crypto-success-glow: 142 76% 46%;
+    --crypto-warning: 38 92% 50%;
+    --crypto-warning-glow: 38 92% 60%;
+    --crypto-danger: 0 84% 60%;
+    --crypto-danger-glow: 0 84% 70%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--crypto-primary)), hsl(var(--crypto-primary-glow)));
+    --gradient-success: linear-gradient(135deg, hsl(var(--crypto-success)), hsl(var(--crypto-success-glow)));
+    --gradient-chart: linear-gradient(180deg, hsl(var(--background)), hsl(var(--card)));
+    
+    /* Shadows and effects */
+    --shadow-crypto: 0 10px 30px -10px hsl(var(--crypto-primary) / 0.3);
+    --shadow-glow: 0 0 40px hsl(var(--crypto-primary-glow) / 0.2);
+    --shadow-card: 0 4px 12px hsl(0 0% 0% / 0.15);
+    
+    /* Animation */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.15s ease-out;
 
     --sidebar-background: 0 0% 98%;
 
