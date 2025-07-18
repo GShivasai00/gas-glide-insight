@@ -20,25 +20,25 @@ export const ChartWidget: React.FC<ChartWidgetProps> = ({ selectedChain, onChain
   useEffect(() => {
     if (!chartContainerRef.current) return;
     
-    // Create chart
+    // Create chart with proper color format for lightweight-charts
     const chart = createChart(chartContainerRef.current, {
       width: chartContainerRef.current.clientWidth,
       height: 400,
       layout: {
         background: { color: 'transparent' },
-        textColor: 'hsl(213 31% 91%)',
+        textColor: '#d4d4d8', // Convert from hsl(213 31% 91%) to hex
       },
       grid: {
-        vertLines: { color: 'hsl(240 21% 15% / 0.5)' },
-        horzLines: { color: 'hsl(240 21% 15% / 0.5)' },
+        vertLines: { color: 'rgba(64, 64, 64, 0.5)' },
+        horzLines: { color: 'rgba(64, 64, 64, 0.5)' },
       },
       timeScale: {
-        borderColor: 'hsl(240 21% 15%)',
+        borderColor: '#404040',
         timeVisible: true,
         secondsVisible: false,
       },
       rightPriceScale: {
-        borderColor: 'hsl(240 21% 15%)',
+        borderColor: '#404040',
         scaleMargins: {
           top: 0.1,
           bottom: 0.1,
@@ -47,31 +47,31 @@ export const ChartWidget: React.FC<ChartWidgetProps> = ({ selectedChain, onChain
       crosshair: {
         mode: 1,
         vertLine: {
-          color: 'hsl(195 100% 50% / 0.5)',
+          color: 'rgba(0, 212, 255, 0.5)', // Convert crypto-primary with transparency
           width: 1,
           style: 2,
         },
         horzLine: {
-          color: 'hsl(195 100% 50% / 0.5)',
+          color: 'rgba(0, 212, 255, 0.5)', // Convert crypto-primary with transparency
           width: 1,
           style: 2,
         },
       },
     });
     
-    // Add candlestick series for gas prices
+    // Add candlestick series for gas prices with compatible colors
     const candlestickSeries = chart.addCandlestickSeries({
-      upColor: 'hsl(142 76% 36%)',
-      downColor: 'hsl(0 84% 60%)',
-      borderUpColor: 'hsl(142 76% 46%)',
-      borderDownColor: 'hsl(0 84% 70%)',
-      wickUpColor: 'hsl(142 76% 36%)',
-      wickDownColor: 'hsl(0 84% 60%)',
+      upColor: '#22c55e', // Convert from hsl(142 76% 36%) to hex
+      downColor: '#ef4444', // Convert from hsl(0 84% 60%) to hex
+      borderUpColor: '#16a34a', // Convert from hsl(142 76% 46%) to hex
+      borderDownColor: '#dc2626', // Convert from hsl(0 84% 70%) to hex
+      wickUpColor: '#22c55e',
+      wickDownColor: '#ef4444',
     });
     
-    // Add line series for USD values
+    // Add line series for USD values with compatible color
     const lineSeries = chart.addLineSeries({
-      color: 'hsl(195 100% 50%)',
+      color: '#00d4ff', // Convert from hsl(195 100% 50%) to hex
       lineWidth: 2,
       priceScaleId: 'right',
       title: 'USD Value',
